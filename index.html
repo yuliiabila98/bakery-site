@@ -30,9 +30,19 @@
               </li>
             </ul>
           </nav>
-          <button class="button modal-btn-open" type="button">
+          <button class="header__button button modal-btn-open" type="button">
             Замовити дзвінок
           </button>
+          <button class="header__burger menu-btn-open" type="button">
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu">
+            <button class="mobile-menu__btn-close menu-btn-close" type="button">
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -42,6 +52,12 @@
           <h1 class="hero-section__title">
             <span class="text-brand">Сучасна</span> пекарня
           </h1>
+          <button
+            class="hero-section__button button modal-btn-open"
+            type="button"
+          >
+            Замовити дзвінок
+          </button>
         </div>
       </section>
       <section class="advantages-section">
@@ -62,7 +78,7 @@
         <div class="container">
           <div class="traditions-section__container">
             <div class="traditions-section__content">
-              <h2 class="traditions-section__title section-title">
+              <h2 class="traditions-section__title section__title">
                 Новий формат традицій
               </h2>
               <p>
@@ -83,13 +99,15 @@
               </p>
             </div>
             <img
+              class="traditions-section__image"
               src="./images/baker-man.jpg"
+              srcset="./images/baker-man.jpg 1x, ./images/baker-man@2x.jpg 2x"
               alt="Чоловік пекар дивиться на батони із посмішкою"
             />
           </div>
         </div>
       </section>
-      <section class="chefs-section section" id="chefs-section">
+      <!-- <section class="chefs-section section" id="chefs-section">
         <div class="container">
           <h2
             class="chefs-section__title section__title section__title--centered"
@@ -143,8 +161,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="formats-section section" id="formats-section">
+      </section> -->
+      <!-- <section class="formats-section section" id="formats-section">
         <div class="container">
           <h2
             class="formats-section__title section__title section__title--centered"
@@ -217,8 +235,8 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="contacts-section section" id="contacts-section">
+      </section> -->
+      <!-- <section class="contacts-section section" id="contacts-section">
         <div class="container">
           <div class="contacts-section__container">
             <div class="contacts-section__form">
@@ -288,9 +306,9 @@
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer-container">
           <nav class="footer-nav">
@@ -323,7 +341,7 @@
               </li>
               <li>
                 <a class="address-link" href="mailto:shopbakery@gmail.com">
-                  <!-- shopbakery@gmail.com -->
+                  shopbakery@
                 </a>
               </li>
               <li>
@@ -359,7 +377,7 @@
           </address>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <div class="backdrop backdrop--is-hidden">
       <div class="modal">
         <button class="modal__btn-close modal-btn-close" type="button">
@@ -426,5 +444,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
