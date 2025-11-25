@@ -1,6 +1,11 @@
 .container {
   width: 100%;
-  max-width: 1288px; /* 1240 + padding 24*2 = 1288*/
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
+
+  @media screen and (min-width: $bp-tablet) {
+    max-width: 1288px; /* 1240 + padding 24*2 = 1288*/
+    padding: 0 24px;
+  }
 }

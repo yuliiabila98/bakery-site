@@ -6,75 +6,87 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
 
-.footer::before,
-.footer::after {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  bottom: 0;
-}
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 0;
+  }
 
-.footer::before {
-  background-image: url("../images/decor-bread-left.png");
-  width: 180px;
-  height: 120px;
-  left: 0;
-}
+  &::before {
+    background-image: url("../images/decor-bread-left.png");
+    width: 180px;
+    height: 120px;
+    left: 0;
+  }
 
-.footer::after {
-  background-image: url("../images/decor-bread-right.png");
-  width: 380px;
-  height: 190px;
-  right: 0;
-}
+  &::after {
+    background-image: url("../images/decor-bread-right.png");
+    width: 380px;
+    height: 190px;
+    right: 0;
+  }
 
-.footer-container {
-  display: flex;
-  gap: 20px;
-}
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-.footer-nav,
-.footer-address {
-  display: flex;
-  flex-basis: 50%;
-  gap: 20px;
-}
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+    }
+  }
 
-.footer-logo,
-.footer-menu {
-  flex-grow: 1;
-}
+  &__nav,
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
 
-.address-list,
-.address-info {
-  flex-grow: 1;
-}
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      flex-basis: 50%;
+      text-align: left;
+    }
+  }
 
-.footer-link {
-  display: inline-block;
-}
+  &__logo,
+  &__menu {
+    flex-grow: 1;
+  }
 
-.address-link {
-  font-size: 16px;
-  font-weight: 300;
-  color: var(--color-primary-light);
-  text-decoration: none;
-}
+  &__list,
+  &__info {
+    flex-grow: 1;
+  }
 
-.address-link:hover {
-  color: var(--color-brand-normal);
-}
+  &__link {
+    display: inline-block;
+  }
 
-.address-icon {
-  fill: var(--color-primary-light);
-}
+  &__address-link {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-primary-light);
+    text-decoration: none;
+  }
 
-.address-icon:hover {
-  fill: var(--color-brand-normal);
-}
+  &__address-link:hover {
+    color: var(--color-brand-normal);
+  }
 
-.address-copyright {
-  font-size: 14px;
+  &__address-icon {
+    fill: var(--color-primary-light);
+
+    &:hover {
+      fill: var(--color-brand-normal);
+    }
+  }
+
+  &__address-copyright {
+    font-size: 14px;
+  }
 }

@@ -1,5 +1,5 @@
 .carousel-button {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 44px;
@@ -12,13 +12,17 @@
   background-color: transparent;
   cursor: pointer;
   transition: background-color 0.3s;
-}
 
-.carousel-button:hover {
-  background-color: var(--color-primary-dark);
-  fill: var(--color-primary-light);
-}
+  @media screen and (min-width: $bp-tablet) {
+    display: flex;
+  }
 
-.carousel-button.next {
-  transform: rotate(180deg);
+  &:hover {
+    background-color: var(--color-primary-dark);
+    fill: var(--color-primary-light);
+  }
+
+  &.next {
+    transform: rotate(180deg);
+  }
 }
